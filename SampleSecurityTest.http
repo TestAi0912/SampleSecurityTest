@@ -1,0 +1,22 @@
+@SampleSecurityTest_HostAddress = http://localhost:5288
+
+### User — SQL injection sample
+GET {{SampleSecurityTest_HostAddress}}/api/user/1
+
+### User — command injection sample
+GET {{SampleSecurityTest_HostAddress}}/api/user/search?term=admin
+
+### User — path traversal sample
+GET {{SampleSecurityTest_HostAddress}}/api/user/profile?fileName=../../windows/win.ini
+
+### User — weak crypto sample
+POST {{SampleSecurityTest_HostAddress}}/api/user/hash-password
+Content-Type: application/json
+
+"password123"
+
+### Order — null / magic number sample
+GET {{SampleSecurityTest_HostAddress}}/api/order/ORD-100
+
+### Order — SSRF sample
+GET {{SampleSecurityTest_HostAddress}}/api/order/download?url=http://127.0.0.1:80/
