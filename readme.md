@@ -1,7 +1,7 @@
 # SampleSecurityTest — Intentional Findings App
 
 .NET Core Web API built **only for code-scanner accuracy testing**.  
-It intentionally embeds **20 findings** across four scan engines.
+It intentionally embeds **20 findings** across four scan enginessss.
 
 > **WARNING:** Do not deploy this application. It contains deliberate security flaws.
 
